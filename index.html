@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+           <div class="bg-light col-md-8 py-4">
+            <section id="setting">
+                <h2 class="py-5 text-center">Setting Your Quiz</h2>
+                <div class="alert alert-danger " id="alert">you have to fill all inputs </div>
+           <div class="form-group">
+            <label for="category" class="mb-2 color-main">Category : </label>
+            <select name="category" id="category" class="form-control mb-2 p-2">
+                <option value="9">General Knowledge</option>
+                <option value="27">Animals</option>
+                <option value="15">Video Games</option>
+                <option value="23">History</option>
+                <option value="21">Sports</option>
+                <option value="18">Science: Computers</option>
+            </select>
+           </div>
+                <label class="color-main mb-2">Difficulty : </label>
+                <br/>
+                <input id="easy" checked type="radio" value="easy" name="difficulty">
+                <label for="easy">Easy</label>
+                <br/>
+                <input id="medium" type="radio" value="medium" name="difficulty">
+                <label for="medium">Medium</label>
+                <br/>
+                <input id="hard" type="radio" value="hard" name="difficulty">
+                <label for="hard" class="mb-2">Hard</label>
+                <br/>
+                <input id="numberOfQuestions" placeholder="Number of Questions" type="number" class="form-control">
+           <button class="btn bg-main text-white rounded-3 mt-2" type="submit" id="strBtn">Start</button>
+            </section>
+            <section id="quiz">
+                <h2 class="color-main py-4 text-center ">Quiz</h2>
+                <div class=" d-flex ">
+                 <div class="bg-main rounded-3 text-white p-2 w-25">
+                    <span id="currentQ">1</span> Of <span id="totalAmount"> 5 </span> Questions
+                 </div>
+                 <div class="w-25 mx-2   ">
+                    <span id="correct" class="alert alert-success p-1 ">correct</span>
+                    <span id="incorrect" class="alert alert-danger p-1 ">incorrect</span>
+                 </div>
+        
+                </div>
+                <div class="d-flex pt-2">
+
+                    <span> Q: </span>
+                    <p id="question" class="ms-1"></p>
+                </div>
+                <h6 class="color-main">Answers : </h6>
+                <div id="rowAnswer" class="pb-3">
+                 
+                 
+                </div>
+                <button id="nextBtn" class="btn bg-main text-white ">submit</button>
+            </section>
+            <section id="finish">
+                <h2 class="color-main py-4 text-center ">Finish</h2>
+                <div id="result " class="p-4 mb-2 text-center color-main">
+                    <h3>score</h3>
+                    <h4 id="score"></h4>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button id="try" class="btn bg-main text-white">Try Again ?</button>
+                </div>
+               
+            </section>
+           </div>
+        </div>
+    </div> 
+    <script src="js/jquery-3.6.0.min.js"></script>
+   <script type="module" src="js/index.js"></script> 
+</body>
+</html>
